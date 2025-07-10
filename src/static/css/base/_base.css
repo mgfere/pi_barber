@@ -1,0 +1,39 @@
+/* _base.css */
+
+/* Estilos para títulos de sección */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Estilos generales para imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos para formularios base (pueden ser extendidos en otros archivos) */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Clases de utilidad general */
+.text-center { text-align: center }
+.mt-1 { margin-top: 0.5rem }
+.mt-2 { margin-top: 1rem }
+.mt-3 { margin-top: 1.5rem }
+.mt-4 { margin-top: 2rem }
+/* ... puedes añadir más utilidades según necesites */

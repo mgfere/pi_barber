@@ -1,0 +1,91 @@
+body {
+  background: rgb(30, 30, 30);
+  color: #b2dfdb;
+}
+
+.container {
+  background: #232526;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+  margin-top: 40px;
+}
+
+h1 {
+  color: #b2dfdb;
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+label,
+.form-label {
+  color: #b2dfdb;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  background: #181a1b;
+  color: #b2dfdb;
+  border: 1.5px solid #b2dfdb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: #b2dfdb;
+  background: #232526;
+  color: #fff;
+  outline: none;
+}
+
+.btn-primary {
+  background: #b2dfdb;
+  color: #181a1b;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-right: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary:hover {
+  background: rgb(40, 40, 40);
+  color: #b2dfdb;
+}
+
+.btn-secondary {
+  background: #232526;
+  color: #b2dfdb;
+  border: 1.5px solid #b2dfdb;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 24px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #b2dfdb;
+  color: #232526;
+}
+
+select.form-control,
+input[type="date"].form-control {
+  background: rgb(40, 40, 40);
+  color: #b2dfdb;
+}
+
+option {
+  background: rgb(40, 40, 40);
+  color: #b2dfdb;
+}
+
+.bi-calendar i {
+  color: #b2dfdb;
+  margin-right: 8px;
+  background-color: #181a1b;
+}

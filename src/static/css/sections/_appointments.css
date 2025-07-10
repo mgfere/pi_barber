@@ -1,0 +1,110 @@
+.appointments {
+  background-color: var(--primary-color);
+}
+
+/* Contenedor principal de la sección de citas */
+#appointments .container {
+  margin-top: 3rem;
+}
+
+/* Título principal */
+#appointments h1,
+#appointments h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+  background-color: rgb(40, 40, 40);
+  color: mintcream;
+  outline: 2px solid #b2dfdb;
+  border: none;
+}
+
+/* Formulario de agendar cita */
+.appointment-form .mb-3 {
+  background: rgba(40, 40, 40, 0.85);
+  border-radius: 12px;
+  padding: 0px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  max-width: 400px;
+  margin: 0 auto 32px auto;
+}
+
+/* Botón agendar */
+.appointment-form .mb-3 .btn-primary {
+  background: #b2dfdb;
+  color: #222;
+  border: none;
+  width: 100%;
+}
+
+/* Etiquetas e inputs */
+.mb-3 label,
+.mb-3 input,
+.mb-3 select {
+  color: mintcream;
+  background-color: rgb(40, 40, 40);
+}
+
+/* Lista de citas */
+.citas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjeta de cada cita */
+.cita-card {
+  background: rgb(40, 40, 40);
+  border-radius: 25px;
+  padding: 18px 22px;
+  min-width: 260px;
+  max-width: 320px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  margin-bottom: 10px;
+  color: mintcream;
+}
+
+.btn-warning { background: #1ea1c9; border: none; color: #fff; }
+.btn-warning:hover { background: #1ea1c9; color: #404040; }
+
+.btn-danger { background: #d84171; border: none; color: #fff; }
+.btn-danger:hover { background: #d84171; color: #404040; }
+
+
+/* Texto principal de la cita */
+.cita-info {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* Texto de la cita */
+.cita-card .badge {
+  background: #b2dfdb;
+  color: #222;
+  font-size: 0.95em;
+}
+
+/* Acciones de la cita: centradas */
+.acciones-cita {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Botones dentro de la tarjeta */
+.cita-card .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Texto cuando no hay citas */
+.citas-list .text-center {
+  color: #fff;
+  width: 100%;
+}

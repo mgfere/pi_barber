@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 50px;
+}
+
+.alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 430px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="nombre_usuario"] {
+  background-color: rgb(40, 40, 40);
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="contraseña"] {
+  background-color: rgb(40, 40, 40);
+  margin-bottom: 10px;
+}
+
+.form-signin input:-webkit-autofill,
+.form-signin input:-webkit-autofill:focus,
+.form-signin input:-webkit-autofill:hover,
+.form-signin input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgb(40, 40, 40) inset !important;
+  box-shadow: 0 0 0 1000px rgb(40, 40, 40) inset !important;
+  -webkit-text-fill-color: mintcream !important;
+  color: mintcream !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.h3.mb-3.fw-normal {
+  color: mintcream;
+  text-align: center;
+}
+.form-signin .form-floating input.form-control {
+  color: mintcream;
+}
+.form-signin .form-floating label {
+  color: darkgrey;
+}
+.form-signin .form-floating p {
+  color: mintcream;
+}
+.form-label i {
+  margin-right: 5px;
+  color: darkgrey;
+}
+.form-signin a {
+  background-color: rgb(40, 40, 40);
+  border: 4px solid rgb(40, 40, 40);
+  border-radius: 12px;
+  color: darkgrey;
+}
+
+.form-signin a:hover {
+  color: mintcream;
+}
+.w-100.btn.btn-lg.btn-primary {
+  background-color: rgb(40, 40, 40);
+  border: 1px solid mintcream;
+  border-radius: 5px;
+}

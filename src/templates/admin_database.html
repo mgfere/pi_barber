@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+{% block title %}Base de datos{% endblock %}
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/admin_citas.css') }}">
+{% endblock %}
+{% block body %}
+<div class="container mt-5">
+  <h1 class="admin-citas-title mb-4 text-center">Base de datos</h1>
+  <ul class="pages-links mb-4">
+    <li><a href="{{ url_for('admin_citas') }}">Volver a gestión de citas</a></li>
+  </ul>
+  {% for nombre, tabla in tablas.items() %}
+    <h3 class="mt-4">{{ nombre|capitalize }}</h3>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            {% for col in tabla.columnas %}
+              {% if col != 'contraseña_hash' %}
+                <th>{{ col }}</th>
+              {% endif %}
+            {% endfor %}
+            {% if nombre == 'usuarios' %}
+              <th>Acciones</th>
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for fila in tabla.filas %}
+            <tr>
+              {% for col in tabla.columnas %}
+                {% if col != 'contraseña_hash' %}
+                  <td>{{ fila[col] }}</td>
+                {% endif %}
+              {% endfor %}
+              {% if nombre == 'usuarios' %}
+                <td>
+                  {% if fila['rol'] == 'admin' and fila['id_usuario'] != session['usuario_id'] %}
+                    <a href="{{ url_for('quitar_admin', id_usuario=fila['id_usuario']) }}" class="btn btn-sm btn-secondary" title="Quitar admin" onclick="return confirm('¿Seguro que deseas quitar admin a este usuario?');">
+                      <i class="fas fa-user-slash"></i> Quitar admin
+                    </a>
+                  {% elif fila['rol'] != 'admin' %}
+                    <a href="{{ url_for('hacer_admin', id_usuario=fila['id_usuario']) }}" class="btn btn-sm btn-success" title="Hacer admin" onclick="return confirm('¿Seguro que deseas hacer admin a este usuario?');">
+                      <i class="fas fa-user-shield"></i> Hacer admin
+                    </a>
+                  {% endif %}
+                </td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

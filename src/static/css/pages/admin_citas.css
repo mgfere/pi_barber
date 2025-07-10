@@ -1,0 +1,148 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #181a1b;
+  color: #e0f2f1;
+}
+
+.pages-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  position: static;
+  left: auto;
+  transform: none;
+}
+
+.pages-links li { margin: 0 40px }
+.pages-links a { font-weight: 500; position: relative }
+.pages-links a { color: #b2dfdb }
+.pages-links a:hover { color: #1ea1c9 }
+
+
+.admin-citas-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.admin-citas-title {
+  color: #b2dfdb;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.admin-citas-table-responsive {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  background: #232526;
+  padding: 0;
+}
+.admin-citas-table {
+  background: rgba(30,30,30,0.98);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 0;
+  color: #e0f2f1;
+}
+.admin-citas-table th,
+.admin-citas-table td {
+  vertical-align: middle;
+  text-align: center;;
+}
+.admin-citas-table thead th {
+  background: #222;
+  color: #b2dfdb;
+}
+.admin-citas-table thead {
+  background: #222;
+  color: #b2dfdb;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #b2dfdb;
+}
+.admin-citas-table tbody td {
+  background: #23272b;
+  color: #fff;
+}
+.admin-citas-table tbody tr {
+  transition: background 0.2s;
+}
+.admin-citas-table tbody tr:hover {
+  background: #263238;
+}
+.btn-warning { background: #1ea1c9; border: none; color: #fff; }
+.btn-warning:hover { background: #1ea1c9; color: #303030; }
+
+.btn-danger { background: #d84171; border: none; color: #fff; }
+.btn-danger:hover { background: #d84171; color: #303030; }
+
+.btn-success { background: #892ad6; border: none; color: #fff; }
+.btn-success:hover { background: #892ad6; color: #303030; }
+
+.btn-secondary { background: #757575; border: none; color: #fff; }
+.btn-secondary:hover { background: #757575; color: #303030; }
+
+
+.btn-warning:active,
+.btn-warning:focus {
+  background: #1ea1c9 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-danger:active,
+.btn-danger:focus {
+  background: #d84171 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-success:active,
+.btn-success:focus {
+  background: #892ad6 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary:active,
+.btn-secondary:focus {
+  background: #757575 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.badge.estado-pendiente {
+  background: #fff3cd;
+  color: #856404;
+}
+.badge.estado-completada {
+  background: #b2dfdb;
+  color: #222;
+}
+.badge.estado-cancelada {
+  background: #f8d7da;
+  color: #721c24;
+}
+.btn-warning, .btn-danger, .btn-success, .btn-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-warning i, .btn-danger i, .btn-success i, .btn-secondary i {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .admin-citas-title { font-size: 1.2rem; }
+  .admin-citas-table th,
+  .admin-citas-table td {
+    font-size: 0.95em;
+    padding: 0.3em 0.1em;
+  }
+  .admin-citas-table-responsive { border-radius: 10px; }
+}

@@ -1,0 +1,94 @@
+{% extends './base.html' %}
+
+{% block title %}Editar Cita{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/editar_cita_admin.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+  <h1>Editar Cita</h1>
+  <form method="post">
+    <div class="mb-3">
+      <label>Fecha</label>
+      <input type="date" name="fecha" value="{{ cita.fecha }}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="hora" class="form-label">Hora</label>
+      <select class="form-control" id="hora" name="hora" required>
+        <option value="{{ cita.hora }}">{{ cita.hora }}</option>
+        <option value="09:00 AM">09:00 AM</option>
+        <option value="09:15 AM">09:15 AM</option>
+        <option value="09:30 AM">09:30 AM</option>
+        <option value="09:45 AM">09:45 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="10:15 AM">10:15 AM</option>
+        <option value="10:30 AM">10:30 AM</option>
+        <option value="10:45 AM">10:45 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="11:15 AM">11:15 AM</option>
+        <option value="11:30 AM">11:30 AM</option>
+        <option value="11:45 AM">11:45 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="12:15 PM">12:15 PM</option>
+        <option value="12:30 PM">12:30 PM</option>
+        <option value="12:45 PM">12:45 PM</option>
+        <option value="01:00 PM">01:00 PM</option>
+        <option value="01:15 PM">01:15 PM</option>
+        <option value="01:30 PM">01:30 PM</option>
+        <option value="01:45 PM">01:45 PM</option>
+        <option value="02:00 PM">02:00 PM</option>
+        <option value="02:15 PM">02:15 PM</option>
+        <option value="02:30 PM">02:30 PM</option>
+        <option value="02:45 PM">02:45 PM</option>
+        <option value="03:00 PM">03:00 PM</option>
+        <option value="03:15 PM">03:15 PM</option>
+        <option value="03:30 PM">03:30 PM</option>
+        <option value="03:45 PM">03:45 PM</option>
+        <option value="04:00 PM">04:00 PM</option>
+        <option value="04:15 PM">04:15 PM</option>
+        <option value="04:30 PM">04:30 PM</option>
+        <option value="04:45 PM">04:45 PM</option>
+        <option value="05:00 PM">05:00 PM</option>
+        <option value="05:15 PM">05:15 PM</option>
+        <option value="05:30 PM">05:30 PM</option>
+        <option value="05:45 PM">05:45 PM</option>
+        <option value="06:00 PM">06:00 PM</option>
+        <option value="06:15 PM">06:15 PM</option>
+        <option value="06:30 PM">06:30 PM</option>
+        <option value="06:45 PM">06:45 PM</option>
+        <option value="07:00 PM">07:00 PM</option>
+        <option value="07:15 PM">07:15 PM</option>
+        <option value="07:30 PM">07:30 PM</option>
+        <option value="07:45 PM">07:45 PM</option>
+        <option value="08:00 PM">08:00 PM</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="servicio" class="form-label">Servicio</label>
+      <select class="form-control" id="servicio" name="servicio" required>
+        <option value="{{ cita.servicio }}">{{ cita.servicio }}</option>
+        <option value="Corte fade">Corte fade</option>
+        <option value="Corte escolar">Corte escolar</option>
+        <option value="Corte con tijera">Corte con tijera</option>
+        <option value="Barba">Barba</option>
+        <option value="Corte y barba">Corte y barba</option>
+        <option value="Diseño de ceja">Diseño de ceja</option>
+        <option value="Tinte">Tinte</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label>Estado</label>
+      <select name="estado" class="form-control">
+        <option value="pendiente" {% if cita.estado == 'pendiente' %}selected{% endif %}>Pendiente</option>
+        <option value="completada" {% if cita.estado == 'completada' %}selected{% endif %}>Completada</option>
+        <option value="cancelada" {% if cita.estado == 'cancelada' %}selected{% endif %}>Cancelada</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a href="{{ url_for('admin_citas') }}" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+{% endblock %}

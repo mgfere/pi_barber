@@ -1,0 +1,126 @@
+.haircuts { background: var(--primary-color) }
+
+.haircuts h2{
+  color: var(--light-color);
+}
+
+.haircuts p {
+  color: var(--light-color);
+  margin-bottom: 20px;
+}
+
+.haircuts-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(1, 1fr);    /* 2 filas */
+  gap: 12px;
+  justify-items: center;
+  align-items: center;   
+}
+
+.haircuts-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+}
+
+.haircuts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.haircuts-card {
+  background: transparent;
+  padding: 10px 50px;
+  border-radius: 25px;
+  text-align: center;
+  transition: var(--transition);
+
+}
+
+.haircuts-gallery img:hover {
+  transform: scale(1.07) translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+.haircuts-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--black-color);
+  color: var(--light-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+}
+
+.haircuts-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--black-color);
+}
+
+.section-title {
+  color: var(--light-color);
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 900px;      /* Puedes aumentar este valor si quieres aún más ancho */
+  margin: 0 auto 40px auto;
+  background: rgba(0,0,0,0.10);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 32px 0 24px 0;
+}
+
+.carousel-inner {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  padding: 0 24px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--white-color, #999999);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 6px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin-bottom: 15px;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--white-color, #999999);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-size: 60% 60%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 9%; /* Reduce el ancho para acercar las flechas */
+}

@@ -1,0 +1,9 @@
+# Entorno virtual
+env/
+
+# Archivo de variables de entorno
+.env
+
+# Bytecode de Python
+__pycache__/
+*.pyc
