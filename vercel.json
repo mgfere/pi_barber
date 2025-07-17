@@ -22,10 +22,6 @@
     {
       "src": "/(.*)",
       "dest": "/src/app.py"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "../src/static/favicon.ico"
     }
   ]
 }
