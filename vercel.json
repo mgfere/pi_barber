@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "rewrites": [
+    {"source": "/(.*)", "destination": "/"}
+  ],
   "builds": [
     {
       "src": "src/app.py",
@@ -12,10 +15,7 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/src/static/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=3600"
-      }
+      "dest": "/src/static/$1"
     },
     {
       "src": "/(.*)",

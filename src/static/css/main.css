@@ -12,7 +12,7 @@
 @import url('./pages/admin_citas.css');
 @import url('./pages/editar_cita_admin.css');
 @import url('./pages/editar_cita_usuario.css');
-@import url('../pages/login.css');
+@import url('./pages/login.css');
 @import url('./pages/register.css');
 @import url('./pages/reset_password_request.css');
 @import url('./pages/reset_password.css');
