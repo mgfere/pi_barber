@@ -10,14 +10,17 @@
       }
     }
   ],
+  "env": {
+      "FLASK_ENV": "production"
+  },
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/src/static/$1"
+        "src": "/static/(.*)",
+        "dest": "../static/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "src/app.py"
+        "src": "/templates/(.*)",
+        "dest": "../templates/$1"
     }
   ]
 }
