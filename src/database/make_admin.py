@@ -1,5 +1,5 @@
-from src.database import db_session
-from src.database.models import Usuario
+from database import db_session
+from database.models import Usuario
 
 # Cambia esto por el nombre de usuario que quieres hacer admin
 nombre_usuario = 'migi'

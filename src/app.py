@@ -2,15 +2,16 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from werkzeug.security import generate_password_hash
 from sqlalchemy import inspect, text
 from functools import wraps
-from src.config import Config
-from src.database import engine, db_session
-from src.database.models import Usuario, Cita
+from config import Config
+from config import config
+from database import engine, db_session
+from database.models import Usuario, Cita
 from datetime import datetime
 
 from itsdangerous import URLSafeTimedSerializer
 serializador = URLSafeTimedSerializer(Config.SECRET_KEY)
 from flask_mail import Mail, Message
-from src.database import init_app
+from database import init_app
 
 app = Flask(__name__, 
             static_folder='static',
@@ -293,6 +294,6 @@ def database():
     return render_template('admin_database.html', tablas=datos)
 
 
-# if __name__ == '__main__':
-#     app.config.from_object(config['desarrollador'])
-#     app.run()
+if __name__ == '__main__':
+    app.config.from_object(config['desarrollador'])
+    app.run()
