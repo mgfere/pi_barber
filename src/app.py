@@ -3,7 +3,6 @@ from werkzeug.security import generate_password_hash
 from sqlalchemy import inspect, text
 from functools import wraps
 from config import Config
-from config import config
 from database import engine, db_session
 from database.models import Usuario, Cita
 from datetime import datetime
