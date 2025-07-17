@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
+    {
       "src": "^/static/(.*)$",
       "dest": "src/static/$1"
     },
@@ -15,10 +19,5 @@
       "src": "/(.*)",
       "dest": "src/app.py"
     }
-  ],
-  "functions": {
-    "src/app.py": {
-      "includeFiles": "static/**"
-    }
-  }
+  ]
 }
