@@ -293,6 +293,6 @@ def database():
     return render_template('admin_database.html', tablas=datos)
 
 
-if __name__ == '__main__':
-    app.config.from_object(config['desarrollador'])
-    app.run()
+# if __name__ == '__main__':
+#     app.config.from_object(config['desarrollador'])
+#     app.run()
