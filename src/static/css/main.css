@@ -9,6 +9,14 @@
 @import url('./components/_navbar.css');
 @import url('./components/_cards.css');
 
+@import url('./pages/admin_citas.css');
+@import url('./pages/editar_cita_admin.css');
+@import url('./pages/editar_cita_usuario.css');
+@import url('./pages/login.css');
+@import url('./pages/register.css');
+@import url('./pages/reset_password_request.css');
+@import url('./pages/reset_password.css');
+
 /* Secciones */
 @import url('./sections/_hero.css');
 @import url('./sections/_haircuts.css');
