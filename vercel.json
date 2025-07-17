@@ -5,17 +5,20 @@
       "src": "src/app.py",
       "use": "@vercel/python",
       "config": {
-        "includeFiles": ["static/**"]
+        "includeFiles": ["static/**", "templates/**"]
       }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/src/static/$1"
+      "dest": "/src/static/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
+      }
     },
     {
-      "src": "/(.*)", 
+      "src": "/(.*)",
       "dest": "src/app.py"
     }
   ]
