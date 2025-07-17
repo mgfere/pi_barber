@@ -12,8 +12,16 @@
       "dest": "../src/static/$1"
     },
     {
+      "src": "/src/templates/(.*)",
+      "dest": "../src/templates/$1"
+    },
+    {
+      "src": "/database/(.*)",
+      "dest": "../src/database/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "../src/app.py"
+      "dest": "/src/app.py"
     }
   ]
 }
