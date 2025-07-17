@@ -1,7 +1,8 @@
 {
   "version": 2,
   "rewrites": [
-    {"source": "/(.*)", "destination": "/"}
+    {"source": "/static/(.*)", "destination": "/src/static/$1"},
+    {"source": "/(.*)", "destination": "/src/app.py"}
   ],
   "builds": [
     {
