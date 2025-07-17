@@ -16,7 +16,7 @@
       "dest": "src/app.py"
     }
   ],
-  "Functions": {
+  "functions": {
     "src/app.py": {
       "includeFiles": "static/**"
     }
