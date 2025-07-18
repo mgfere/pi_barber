@@ -13,9 +13,7 @@ serializador = URLSafeTimedSerializer(Config.SECRET_KEY)
 from flask_mail import Mail, Message
 from database import init_app
 
-app = Flask(__name__, 
-            static_folder='static',
-            static_url_path='/static')
+app = Flask(__name__)
 init_app(app)  # Inicializa la aplicación con la configuración de la base de datos
 
 app.config.from_object(Config)
