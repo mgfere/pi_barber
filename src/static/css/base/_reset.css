@@ -1,27 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Estructura principal */
 body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-  overflow-x: hidden;
+  display: block; /* Asegura disposición vertical por defecto */
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Si realmente necesitas flex en el body (para el layout general) */
+/*
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+*/
 
+/* Reset específico para secciones */
 section {
-  padding: 80px 0;
+  display: block !important;
+  width: 100% !important;
+  float: none !important;
+  clear: both !important;
 }
 
-/* Tipografía */
-h1, h2, h3, h4 { line-height: 1.2 }
-a { text-decoration: none; color: inherit }
+/* Contenedor para secciones */
+.section-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}
