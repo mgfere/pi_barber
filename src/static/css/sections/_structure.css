@@ -27,3 +27,32 @@ section {
     width: 100%;
     margin-bottom: 2rem;
 }
+
+/* Carrusel de cortes */
+.carousel-inner {
+    display: block;
+}
+
+.carousel-item {
+    float: none;
+    width: 100%;
+}
+
+.haircuts-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Reset básico */
+section, div, article, footer {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
