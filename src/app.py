@@ -2,16 +2,16 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from werkzeug.security import generate_password_hash
 from sqlalchemy import inspect, text
 from functools import wraps
-from config import Config
-from config import config
-from database import engine, db_session
-from database.models import Usuario, Cita
+from src.config import Config
+from src.config import config
+from src.database import engine, db_session
+from src.database.models import Usuario, Cita
 from datetime import datetime
 
 from itsdangerous import URLSafeTimedSerializer
 serializador = URLSafeTimedSerializer(Config.SECRET_KEY)
 from flask_mail import Mail, Message
-from database import init_app
+from src.database import init_app
 
 app = Flask(__name__)
 init_app(app)  # Inicializa la aplicación con la configuración de la base de datos
