@@ -1,4 +1,7 @@
-.haircuts { background: var(--primary-color) }
+.haircuts { 
+  order: 2;
+  background: var(--primary-color)
+}
 
 .haircuts h2{
   color: var(--light-color);

@@ -1,0 +1,30 @@
+/* Estructura principal del body */
+body {
+    display: flex;
+    flex-direction: column; /* Esto es CRUCIAL - establece flujo vertical */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para el contenido */
+.main-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reset para secciones */
+section {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+/* Asegura que los contenedores internos no afecten el flujo */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
