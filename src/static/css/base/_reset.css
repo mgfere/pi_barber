@@ -1,27 +1,29 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.container {
+html, body {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: block; /* Asegura flujo normal */
 }
 
+/* Reset específico para el body en la página de inicio */
+body.home-page {
+  all: initial; /* Reset drástico (opcional) */
+  display: block;
+  position: static;
+}
+
+/* Reset de secciones */
 section {
-  padding: 80px 0;
+  display: block !important;
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  position: static !important;
 }
-
-/* Tipografía */
-h1, h2, h3, h4 { line-height: 1.2 }
-a { text-decoration: none; color: inherit }
