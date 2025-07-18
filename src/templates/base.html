@@ -15,9 +15,12 @@
     <!-- Navbar -->
     <nav class="navbar"></nav>
     <!-- Contenido principal -->
-    <main class="main-content">
-        {% block body %}{% endblock %}
-    </main>
+    {% block body %}
+    <section class="hero"></section>
+    <section class="haircuts"></section>
+    <section class="location"></section>
+    <section class="appointments"></section>
+    {% endblock %}
     <!-- Footer -->
     <footer class="footer"></footer>
     {% block scripts %}
