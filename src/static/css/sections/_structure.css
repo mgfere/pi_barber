@@ -1,0 +1,29 @@
+/* Estructura principal de secciones */
+section {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* Contenedor para centrar contenido */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Reset para elementos flex que puedan estar causando problemas */
+.haircuts-grid, .location-content, .appointments {
+    display: block !important;
+    flex-direction: column !important;
+}
+
+/* Asegurar que los elementos hijos sean bloques */
+.haircuts-card, .location-image, .appointment-form {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
