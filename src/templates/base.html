@@ -17,55 +17,41 @@
     
     <!-- CSS integrado para el layout -->
     <style>
-        /* Reset básico para el layout */
-        body {
-            display: block;
+        /* Reset mejorado */
+        body, html {
+            width: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
             overflow-x: hidden;
-            min-height: 100vh;
         }
         
-        /* Estructura principal */
+        /* Contenedor principal al 100% */
         .main-container {
-            display: block;
-            width: 100%;
+            width: 100vw; /* Ocupa todo el ancho visible */
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
         
-        /* Reset de secciones */
+        /* Secciones al 100% */
         section {
-            display: block;
-            width: 100%;
-            float: none;
-            clear: both;
-            position: relative;
+            width: 100vw !important;
+            max-width: 100%;
+            margin: 0;
             padding: 80px 0;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
         }
         
-        /* Contenedores internos */
-        .container {
+        /* Contenedores internos centrados */
+        .section-container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-        
-        /* Navbar fix */
-        .navbar {
-            position: relative;
-            z-index: 1000;
-        }
-        
-        /* Footer siempre abajo */
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
         }
     </style>
     
