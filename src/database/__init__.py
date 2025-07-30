@@ -1,13 +1,16 @@
 # Base de datos MySQL
-
+import os
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import scoped_session, sessionmaker
+from dotenv import load_dotenv
 
-DB_USER = 'root'
-DB_PASSWORD = '1234'
-DB_HOST = 'localhost'
-DB_PORT = '3306'
-DB_NAME = 'barber'
+load_dotenv() # Carga las variables del archivo .env
+
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
 
 engine = create_engine(f'mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 
