@@ -16,7 +16,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;       /* Centra el contenido si usas max-width */
-  padding: 0 14px;      /* Espacio a los lados */
+  padding: 0 24px;      /* Espacio a los lados */
   box-sizing: border-box;
 }
 
