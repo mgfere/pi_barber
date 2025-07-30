@@ -1,0 +1,21 @@
+/* main.css */
+/* Variables y estilos base */
+@import url('./base/_variables.css');
+@import url('./base/_reset.css');
+@import url('./base/_base.css');
+
+/* Componentes */
+@import url('./components/_buttons.css');
+@import url('./components/_navbar.css');
+@import url('./components/_cards.css');
+
+/* Secciones */
+@import url('./sections/_hero.css');
+@import url('./sections/_haircuts.css');
+@import url('./sections/_location.css');
+@import url('./sections/_appointments.css');
+@import url('./sections/_footer.css');
+
+/* Utilidades */
+@import url('./utilities/_animations.css');
+@import url('./utilities/_responsive.css');

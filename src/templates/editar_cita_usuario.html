@@ -1,0 +1,86 @@
+{% extends './base.html' %}
+
+{% block title %}Editar Cita{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/editar_cita_usuario.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+  <h1>Editar Cita</h1>
+  <form method="post">
+    <div class="mb-3">
+      <label>Fecha</label>
+      <input type="date" name="fecha" value="{{ cita.fecha }}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="hora" class="form-label">Hora</label>
+      <select class="form-control" id="hora" name="hora" required>
+        <option value="">Selecciona una hora</option>
+        <option value="09:00">09:00 AM</option>
+        <option value="09:15">09:15 AM</option>
+        <option value="09:30">09:30 AM</option>
+        <option value="09:45">09:45 AM</option>
+        <option value="10:00">10:00 AM</option>
+        <option value="10:15">10:15 AM</option>
+        <option value="10:30">10:30 AM</option>
+        <option value="10:45">10:45 AM</option>
+        <option value="11:00">11:00 AM</option>
+        <option value="11:15">11:15 AM</option>
+        <option value="11:30">11:30 AM</option>
+        <option value="11:45">11:45 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="12:15">12:15 PM</option>
+        <option value="12:30">12:30 PM</option>
+        <option value="12:45">12:45 PM</option>
+        <option value="13:00">01:00 PM</option>
+        <option value="13:15">01:15 PM</option>
+        <option value="13:30">01:30 PM</option>
+        <option value="13:45">01:45 PM</option>
+        <option value="14:00">02:00 PM</option>
+        <option value="14:15">02:15 PM</option>
+        <option value="14:30">02:30 PM</option>
+        <option value="14:45">02:45 PM</option>
+        <option value="15:00">03:00 PM</option>
+        <option value="15:15">03:15 PM</option>
+        <option value="15:30">03:30 PM</option>
+        <option value="15:45">03:45 PM</option>
+        <option value="16:00">04:00 PM</option>
+        <option value="16:15">04:15 PM</option>
+        <option value="16:30">04:30 PM</option>
+        <option value="16:45">04:45 PM</option>
+        <option value="17:00">05:00 PM</option>
+        <option value="17:15">05:15 PM</option>
+        <option value="17:30">05:30 PM</option>
+        <option value="17:45">05:45 PM</option>
+        <option value="18:00">06:00 PM</option>
+        <option value="18:15">06:15 PM</option>
+        <option value="18:30">06:30 PM</option>
+        <option value="18:45">06:45 PM</option>
+        <option value="19:00">07:00 PM</option>
+        <option value="19:15">07:15 PM</option>
+        <option value="19:30">07:30 PM</option>
+        <option value="19:45">07:45 PM</option>
+        <option value="20:00">08:00 PM</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="servicio" class="form-label">Servicio</label>
+      <select class="form-control" id="servicio" name="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Corte fade">Corte fade</option>
+        <option value="Corte escolar">Corte escolar</option>
+        <option value="Corte con tijera">Corte con tijera</option>
+        <option value="Barba">Barba</option>
+        <option value="Corte y barba">Corte y barba</option>
+        <option value="Diseño de ceja">Diseño de ceja</option>
+        <option value="Tinte">Tinte</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+{% endblock %}

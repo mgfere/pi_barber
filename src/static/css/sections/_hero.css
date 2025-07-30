@@ -1,0 +1,61 @@
+.hero {
+  padding: 150px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/static/img/background_hero.png") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.5; /* Ajusta la opacidad si lo deseas */
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+  color: rgb(220, 220, 220);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: rgb(190, 190, 190);
+}
+
+.hero-image {
+  flex: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-image img { max-width: 100%; height: auto }
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

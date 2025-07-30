@@ -1,0 +1,60 @@
+{% extends './base.html' %}
+
+{% block title %}Gestión de citas{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/admin_citas.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 admin-citas-container">
+  <h1 class="admin-citas-title mb-4 text-center">Gestión de citas</h1>
+    <p class="mt-3">
+      <ul class="pages-links mb-4">
+        <li><a href="{{ url_for('home') }}">Página principal</a></li>
+        <li><a href="{{ url_for('database') }}">Base de datos</a></li>
+      </ul>
+    </p>
+  <div class="table-responsive admin-citas-table-responsive">
+    <table class="table admin-citas-table align-middle">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Servicio</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for cita in citas %}
+        <tr>
+          <td>{{ cita.id_cita }}</td>
+          <td>{{ cita.usuario.nombre_usuario }}</td>
+          <td>{{ cita.usuario.telefono }}</td>
+          <td>{{ cita.fecha }}</td>
+          <td>{{ cita.hora }}</td>
+          <td>{{ cita.servicio }}</td>
+          <td>
+            <span class="badge estado-{{ cita.estado }}">
+              {{ cita.estado|capitalize }}
+            </span>
+          </td>
+          <td>
+            <a href="{{ url_for('editar_cita_admin', id_cita=cita.id_cita) }}" class="btn btn-sm btn-warning" title="Editar">
+              <i class="fas fa-edit">Editar</i>
+            </a>
+            <a href="{{ url_for('borrar_cita', id_cita=cita.id_cita) }}" class="btn btn-sm btn-danger" title="Borrar" onclick="return confirm('¿Seguro que deseas borrar esta cita?');">
+              <i class="fas fa-trash-alt">Borrar</i>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
