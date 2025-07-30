@@ -16,7 +16,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;       /* Centra el contenido si usas max-width */
-  padding: 0 32px;      /* Espacio a los lados */
+  padding: 0 14px;      /* Espacio a los lados */
   box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--white);
 }
@@ -59,7 +59,7 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .nav-links {
